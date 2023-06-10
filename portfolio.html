@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="../klauzury/images/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+ 
+  <!--Sekce s fotkama-->
+  <section class="photo">
+    <div class="container">
+      <article>
+        <img src="images/portfolio/af1.png" alt="">
+        <img src="images/portfolio/af2.png" alt="">
+        <img src="images/portfolio/af3.png" alt="">
+        <img src="images/portfolio/af4.png" alt="">
+      </article>
+      <article>
+        <img src="images/portfolio/ph1.png" alt="">
+        <img src="images/portfolio/ph2.png" alt="">
+        <img src="images/portfolio/ph3.png" alt="">
+        <img src="images/portfolio/ph4.png" alt="">
+      </article>
+      <article>
+        <img src="images/portfolio/www1.png" alt="">
+        <img src="images/portfolio/www2.png" alt="">
+        <img src="images/portfolio/www3.png" alt="">
+        <img src="images/portfolio/www4.png" alt="">
+      </article>
+    </div>
+  </section>
+  <!-- JavaScript s proměnnou datum, den, mesic-->
+  <div class="konec">
+    <script language="javascript" type="text/javascript">
+      var datum = new Date()
+      var den = datum.getDate()
+      var mesic = datum.getMonth() + 1
+      var rok = datum.getUTCFullYear()
+      document.write(+ den + "." + mesic + "." + rok + " |")
+    </script>
+    <span id="color"> Filip Lochman</span>
+  </div>
+  <button class="portfolio">
+    <a href="file:///C:/Users/filda/OneDrive/Plocha/portfolio/index.html"><span>Zpátky na Domů</a></span>
+    <svg viewBox="0 0 13 10" height="10px" width="15px">
+      <path d="M1,5 L11,5"></path>
+      <polyline points="8 1 12 5 8 9"></polyline>
+    </svg>
+  </button>
+</body>
+
+</html>

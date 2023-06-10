@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Filip Lochman</title>
+</head>
+
+<body>
+  <div class="hero">
+    <!-- Navigační lišta pro rychlý přístup k různým sekcím stránky -->
+    <nav>
+      <div class="logo-nav">
+        <h2 class="logo">Filip<span> Lochman</span></h2>
+        <ul>
+          <li><a href="file:///C:/Users/filda/OneDrive/Plocha/portfolio/index.html">Domů</a></li>
+          <li><a href="#omne">O mně</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#hry">Hry</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+  </div>
+  <hr>
+  <img class="background" src="images/background.png">
+  <!-- Animace textu s efektem psaní -->
+  <div class="typing-text">
+    <h1><span class="word">Jsem</span> <span class="input"></span></h1>
+  </div>
+  <script>
+    var typed = new Typed(".input", {
+      strings: ["Developer", "Designer", "Student", "Filip"],
+      typeSpeed: 120,
+      backSpeed: 110,
+      loop: true
+    })
+  </script>
+
+  <!-- Seznam sociálních sítí s ikonami -->
+  <ul class="socialni-site">
+    <li><a href="https://www.facebook.com/filip.lochman188"><span><i
+            class="fa-brands fa-facebook-f"></i></span><span>Facebook</span></a></li>
+    <li><a href="https://www.instagram.com/imdzustea/"><span><i
+            class="fa-brands fa-instagram"></i></span><span>Instagram</span></a></li>
+    <li><a href="https://steamcommunity.com/id/Dzustea/"><span><i
+            class="fa-brands fa-steam"></i></span><span>Steam</span></a></li>
+    <li><a href="https://dsc.gg/dymexcraft"><span><i class="fa-brands fa-discord"></i></span><span>Discord</span></a>
+    </li>
+  </ul>
+  </div>
+  <!-- animace kolečka na scrollování dolů-->
+  <div class="mys">
+    <span class="tlacitko-mys">
+      <span class="scroll"></span></span>
+  </div>
+
+  <hr>
+  <!-- Obrázek a informace o autorovi stránky -->
+  <h2 class="omne" id="omne">O mně</h2>
+  <div class="popis1">
+    <div class="main-img">
+      <img src="images/main-img.png" width="25%" height="25%">
+    </div>
+    <div class="main-text">
+      <p>Jmenuji se <span>Filip Lochman</span> a bydlím ve Zlínském kraji. Narodil jsem se 1.4.2006 v Kroměříži.
+        Programování webů se věnuji asi 2 roky a používám jazyky jako HTML, CSS, Javascript, PHP, SQL.</p>
+    </div>
+  </div>
+  <div class="popis2">
+    <div class="main-text1">
+      <p>Jsem na střední soukromé škole ve Zlíně, kde studuji obor <span>vývoj počítačových her a multimediálních
+          aplikací.</span> Studuji zde první rok a jsem maximálně spokojen.</p>
+    </div>
+    <div class="main-img1">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.4794159523265!2d17.67113257671442!3d49.20134052563811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47137314ee072bcd%3A0xde713b9dbb46238d!2sFilm%20School%20Zl%C3%ADn!5e0!3m2!1sen!2scz!4v1681411348664!5m2!1sen!2scz"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  </div>
+  <div class="portfolio1" id="portfolio">
+    <div class="popis3">
+      <div class="main-img3">
+        <img src="images/portfolio/www3.png" width="30%" height="30%">
+      </div>
+      <div class="main-text3">
+        <p>Zde je ukázka mého <span>osobního portfolia</span>, ve kterém se nacházejí fotografie, práce v photoshopu a
+          webové stránky, které jsem udělal.</p>
+        <button class="portfolio">
+          <a href="file:///C:/Users/filda/OneDrive/Plocha/portfolio/portfolio.html"><span>Moje portfolio</a></span>
+          <svg viewBox="0 0 13 10" height="10px" width="15px">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <!-- 3 sekce oblíbených her - rozdělené do 3 sloupců-->
+  <h2 class="hry" id="hry">Oblíbené hry</h2>
+  <section class="tri-hry">
+    <article>
+      <img src="images/hry/minecraft.jpg" alt="">
+      <h3><span>Minecraft</span></h3>
+      <p>Minecraft je sandboxová hra, ve které hráči mohou tvořit, stavět a prozkoumávat rozsáhlý svět.
+        Hra obsahuje řadu herních režimů, včetně přežití, dobrodružství a tvorby vlastních map.</p>
+    </article>
+    <article>
+      <img src="images/hry/csgo.jpg" alt="">
+      <h3><span>Counter-Strike:Global Offensive</span></h3>
+      <p>Je to střílečka, ve které dva týmy bojují o výhru.
+        Hráči si mohou vybírat ze široké škály zbraní a vybavení, které mohou přizpůsobit svému hernímu stylu.</p>
+    </article>
+    <article>
+      <img src="images/hry/wwh.jpg" alt="">
+      <h3><span>We were here</span></h3>
+      <p>Je to kooperativní puzzle hra pro dva hráče, kteří se nacházejí v různých situacích a místech.
+        Hráči musí spolupracovat a komunikovat, aby řešili různé hádanky a získali klíče nebo různé objekty k úniku z
+        pevnosti.</p>
+    </article>
+  </section>
+  <!-- Formulář pro odeslání dotazu na email -->
+  <article>
+    <h2 class="kontakt" id="kontakt"></h2>
+    <div class="contact-form">
+      <span class="heading">Kontaktuj mě</span>
+      <form>
+        <label for="name">Jméno:</label>
+        <input type="text" required="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="">
+        <label for="message">Zpráva:</label>
+        <textarea id="message" name="message" required=""></textarea>
+        <button type="submit">Odeslat</button>
+      </form>
+    </div>
+  </article>
+  <!-- JavaScript s proměnnou datum, den, mesic-->
+  <div class="konec">
+    <script language="javascript" type="text/javascript">
+      var datum = new Date()
+      var den = datum.getDate()
+      var mesic = datum.getMonth() + 1
+      var rok = datum.getUTCFullYear()
+      document.write(+ den + "." + mesic + "." + rok + " |")
+    </script>
+    <span id="color"> Filip Lochman</span>
+  </div>
+</body>
+
+</html>
