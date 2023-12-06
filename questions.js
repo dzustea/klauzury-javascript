@@ -159,14 +159,34 @@ window.addEventListener("load", function () {
       // Pole otázek pro těžký kvíz
       this.questions = [
         {
+          question: "Jak se nazývá největší poušť na světě?",
+          options: ["Sahara", "Gobi", "Atacama"],
+          correctAnswer: "Sahara"
+        },
+        {
+          question: "Kdo byl prvním prezidentem Spojených států amerických?",
+          options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln"],
+          correctAnswer: "George Washington"
+        },
+        {
+          question: "Kde se nachází Machu Picchu?",
+          options: ["Peru", "Bolívie", "Kolumbie"],
+          correctAnswer: "Peru"
+        },
+        {
+          question: "Jak se jmenuje největší kontinent na Zemi?",
+          options: ["Africký kontinent", "Jižní Amerika", "Asie"],
+          correctAnswer: "Asie"
+        },
+        {
+          question: "Kolik základních druhů barvy vidí lidské oko?",
+          options: ["2", "3", "4"],
+          correctAnswer: "3"
+        },
+        {
           question: "Jak se nazývá největší oceán na světě?",
           options: ["Tichý oceán", "Atlantský oceán", "Indický oceán"],
           correctAnswer: "Tichý oceán"
-        },
-        {
-          question: "Který hmyz vytváří med?",
-          options: ["Včela", "Motýl", "Mravenec"],
-          correctAnswer: "Včela"
         },
         {
           question: "Kde se nachází Velká čínská zeď?",
@@ -224,11 +244,6 @@ window.addEventListener("load", function () {
           correctAnswer: "Slunce a planety"
         },
         {
-          question: "Kolik základních druhů barvy vidí lidské oko?",
-          options: ["2", "3", "4"],
-          correctAnswer: "3"
-        },
-        {
           question: "Která planeta je známá jako 'Červená planeta'?",
           options: ["Merkur", "Venuše", "Mars"],
           correctAnswer: "Mars"
@@ -254,6 +269,11 @@ window.addEventListener("load", function () {
           correctAnswer: "Klokani"
         },
         {
+          question: "Který hmyz vytváří med?",
+          options: ["Včela", "Motýl", "Mravenec"],
+          correctAnswer: "Včela"
+        },
+        {
           question: "Jak se jmenuje nejvyšší vrchol v Severní Americe?",
           options: ["Mount McKinley", "Mount Everest", "Mount Kilimanjaro"],
           correctAnswer: "Mount McKinley"
@@ -267,16 +287,6 @@ window.addEventListener("load", function () {
           question: "Kdo byl prvním člověkem na Měsíci?",
           options: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin"],
           correctAnswer: "Neil Armstrong"
-        },
-        {
-          question: "Kde se nachází Machu Picchu?",
-          options: ["Peru", "Bolívie", "Kolumbie"],
-          correctAnswer: "Peru"
-        },
-        {
-          question: "Jak se jmenuje největší kontinent na Zemi?",
-          options: ["Africký kontinent", "Jižní Amerika", "Asie"],
-          correctAnswer: "Asie"
         },
         {
           question: "Kdo byl prezidentem USA během americké občanské války?",
@@ -294,20 +304,10 @@ window.addEventListener("load", function () {
           correctAnswer: "William Shakespeare"
         },
         {
-          question: "Jak se nazývá největší poušť na světě?",
-          options: ["Sahara", "Gobi", "Atacama"],
-          correctAnswer: "Sahara"
-        },
-        {
           question: "Který prvek je nejběžnější v zemské kůře?",
           options: ["Kyslík", "Uhličitan vápenatý", "Hlinitan sodný"],
           correctAnswer: "Kyslík"
         },
-        {
-          question: "Kdo byl prvním prezidentem Spojených států amerických?",
-          options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln"],
-          correctAnswer: "George Washington"
-        }
       ];
     }
   }
