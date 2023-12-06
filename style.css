@@ -1,0 +1,722 @@
+/* Nastavení pro všechny elementy */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Přechodné efekty pro změnu barvy pozadí */
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Barvy pro zvýraznění vybraného textu na stránce */
+body ::selection {
+    color: #1A1A1A;
+    background-color: #F99417;
+}
+
+/* Tmavý režim pro pozadí a bílý text */
+body.dark-theme {
+    background-color: #363062;
+    color: white;
+}
+
+/* Světlý režim pro pozadí a černý text */
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+/* Stylování nadpisu h1 */
+h1 {
+    color: #F99417;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 75px;
+}
+
+/* Stylování podnadpisu h3 */
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Responsivní stylování pro obrazovky s maximální šířkou 520px */
+@media (max-width: 520px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/* Společné stylování pro nadpisy h1 a p */
+h1,
+p {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+/* Stylování barvy textu*/
+p {
+    color: white;
+}
+
+/* Container pro flexibilní zobrazení prvků */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stylování hlavního textu */
+.main-text {
+    text-align: center;
+    padding-top: 4%;
+}
+
+/* Stylování sekundárního textu */
+.second-text {
+    text-align: center;
+    font-size: 22px;
+    padding: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Responsivní stylování pro obrazovky s maximální šířkou 500px */
+@media (max-width: 500px) {
+    .pravidla li {
+        font-size: 12px;
+    }
+}
+
+/* Responsivní stylování pro obrazovky s šířkou od 501px do 1000px */
+@media (min-width: 501px) and (max-width: 1000px) {
+    .pravidla li {
+        font-size: 15px;
+    }
+}
+
+/* Responsivní stylování pro obrazovky s šířkou od 1001px do 1450px */
+@media (min-width: 1001px) and (max-width: 1450px) {
+    .pravidla li {
+        font-size: 18px;
+    }
+}
+
+/* Responsivní stylování pro obrazovky s šířkou od 1451px do 1920px */
+@media (min-width: 1451px) and (max-width: 1920px) {
+    .pravidla li {
+        font-size: 22px;
+    }
+}
+
+/* Nastavení šířky pro obrazovky nad 1921px */
+@media (min-width: 1921px) {
+    .pravidla li {
+        font-size: 25px;
+    }
+}
+
+/* Stylování prvku box1 s mezerou top a left */
+.box1 {
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+/* Responsivní stylování pro obrazovky s maximální šířkou 1000px */
+@media (max-width: 1000px) {
+
+    .box1,
+    .druhy-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        margin: 5% auto;
+    }
+}
+
+/* Responsivní stylování pro obrazovky s minimální šířkou 1001px */
+@media (min-width: 1001px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    /* Umístění nadpisu h3 na začátek na širokých obrazovkách */
+    h3 {
+        order: -1;
+    }
+
+    .box1,
+    .druhy-box {
+        display: flex;
+        gap: 15px;
+        margin-left: auto;
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Stylování containeru tlačítek */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding-top: 5%;
+}
+
+/* Stylování custom button (obtížnosti) */
+.custom-button {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #4D4C7D;
+    color: #4D4C7D;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 200px;
+}
+
+.custom-button span:first-child {
+    position: static;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.custom-button span:last-child {
+    color: #F99417;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 18px;
+    line-height: 18px;
+}
+
+.custom-button:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2c0e57;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.custom-button:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.custom-button:hover span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* Stylování tlačítek v containeru */
+.button-container {
+    text-align: center;
+    margin-top: 3%;
+}
+
+/* Stylování custom-button s barevným pozadím a textem */
+.custom-button {
+    margin: 25px 3%;
+    padding: 25px 25px;
+    background-color: #4D4C7D;
+    color: #F99417;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    z-index: 1;
+}
+
+/* Stylování odkazu u custom-button */
+.custom-button a {
+    text-decoration: none;
+    color: #F99417;
+}
+
+/* Stylování textu */
+.text {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Stylování containeru tlačítek */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Stylování ikony odkazu */
+.icon-link {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Efekt pro zvýraznění ikony po najetí myší */
+.icon:hover {
+    transform-origin: center bottom;
+    cursor: pointer;
+}
+
+/* Tlačítko pro změni dark / light mode */
+.darkThemeBtn {
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    z-index: 998;
+}
+
+.darkThemeBtn * {
+    transition: all 0.3s;
+}
+
+.darkThemeBtn input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Vzhled tlačítka pro přepínání tmavého a světlého režimu */
+.darkThemeBtn label {
+    border: 1px solid #efefef;
+    background: rgba(239, 239, 239, 0.5);
+    border-radius: 10px;
+    height: 46px;
+    width: 46px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    height: 39.1px;
+    width: 39.1px;
+}
+
+.darkThemeBtn label:active {
+    border-radius: 5px;
+}
+
+/* Vzhled ikony (slunce / měsíc) na tlačítku */
+.darkThemeBtn label svg {
+    position: absolute;
+    width: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    fill: #000;
+}
+
+.darkThemeBtn label svg.sun {
+    width: 20px;
+    opacity: 0;
+    fill: #fff;
+}
+
+.darkThemeBtn label svg.moon {
+    opacity: 1;
+}
+
+/* Barva tlačítka při povoleném tmavém režimu */
+.darkThemeBtn input:checked+label {
+
+    background: #4a6cf7;
+}
+
+.darkThemeBtn input:checked+label svg.sun {
+    opacity: 1;
+}
+
+.darkThemeBtn input:checked+label svg.moon {
+    opacity: 0;
+}
+
+/* Barva pozadí pro indikaci tmavého režimu */
+.darkThemeBtn input:checked~span {
+    background-color: #16174b;
+}
+
+/* Barevné schéma pro různé pop-up okna */
+.dark-popup {
+    background-color: #2c0e57;
+}
+
+.hacker-mode .dark-popup {
+    background-color: #242424;
+}
+
+.hacker-mode .light-popup {
+    background-color: #242424;
+}
+
+.light-popup {
+    background-color: rgb(223, 223, 223);
+}
+
+/* Stylizace a animace pro pop-up okna */
+#popup.visible {
+    display: block;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: right 1s ease-in-out;
+    z-index: 2;
+}
+
+.popup.open {
+    right: 0;
+}
+
+/* Přechodná barva pozadí overlay */
+#overlay {
+    transition: background-color 0.10s;
+}
+
+/* Tlačítko pro zavírání pop-up okna */
+.close-button {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    transition: all 0.2s;
+    z-index: 3;
+    color: #F99417;
+}
+
+/* Zvětšení a změna barvy tlačítka při najetí myší */
+.close-button:hover {
+    transform: scale(1.3);
+    color: red;
+}
+
+/* Stylování otázek v kvízu */
+.question {
+    padding: 15%;
+    font-size: 30px;
+}
+
+/* Onteiner pro otázky v kvízu */
+.question-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Stylování možností odpovědí v kvízu */
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tabulka pro určité elementy */
+table {
+    color: white;
+    font-size: 20px
+}
+
+/* Stylizace tlačítek s animací při najetí myší */
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 10px;
+    border: 0px solid transparent;
+    border-radius: 1.25em;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    background-color: #5f3599;
+    color: white;
+}
+
+.button:hover {
+    background-color: #F99417;
+}
+
+/* Tooltipy pro zobrazování textu po najetí myší */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 4em;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.25) transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Responsivní stylování pro obrazovky s šířkou 1001px až 1920px */
+@media screen and (min-width: 1001px) and (max-width: 1920px) {
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pravidla {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        position: relative;
+        margin-left: 5%;
+    }
+}
+
+/* Responsivní stylování pro obrazovky s šířkou 1921px až 2400px */
+@media screen and (min-width: 1921px) and (max-width: 2400px) {
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pravidla {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        position: relative;
+        margin-left: 5%;
+    }
+}
+
+/* Media query pro mobilní zařízení (max-width: 500px) */
+@media (max-width: 500px) {
+    h3 {
+        font-size: 32px;
+    }
+}
+
+/* Media query pro zařízení od 501px do 1000px */
+@media (min-width: 501px) and (max-width: 1000px) {
+    h3 {
+        font-size: 37px;
+    }
+}
+
+/* Media query pro zařízení od 1001px do 1450px */
+@media (min-width: 1001px) and (max-width: 1450px) {
+    h3 {
+        font-size: 40px;
+    }
+}
+
+/* Media query pro zařízení od 1451px do 1920px */
+@media (min-width: 1451px) and (max-width: 1920px) {
+    h3 {
+        font-size: 45px;
+    }
+}
+
+/* Media query pro zařízení od 1921px do 2200px */
+@media (min-width: 1921px) and (max-width: 2200px) {
+    h3 {
+        font-size: 50px;
+    }
+}
+
+/* Media query pro obrazovky do šířky 1200px */
+@media (max-width: 1200px) {
+    h3 {
+        padding-top: 5%;
+    }
+}
+
+.pravidla {
+    padding: 5%;
+}
+
+.pravidla li {
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Barva textu v tmavém tématu */
+.body-dark-theme .pravidla li {
+    color: white;
+}
+
+/* Barva textu ve světlém tématu */
+.body-light-theme .pravidla li {
+    color: black;
+}
+
+/* Styly pro container1 s flex displejem */
+.container1 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Styly pro box */
+.box {
+    width: 130px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -165px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-right: -140px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Styly pro box2 */
+#box2 {
+    background-color: #4D4C7D;
+    border: 2px solid #15FF00;
+    box-shadow: 0 0 20px #15FF00;
+}
+
+#image-container {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#my-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styly pro tlačítko hacker */
+#my-button-hacker {
+    margin-top: 10px;
+    background-color: #11ca00;
+}
+
+/* Styly pro text v hacker módu */
+body.hacker-mode h1,
+body.hacker-mode h3 {
+    color: #15FF00 !important;
+}
+
+/* Styly pro pozadí v hacker módu */
+body.hacker-mode {
+    background-color: #1A1A1A !important;
+}
+
+.hacker-mode .custom-button {
+    background-color: #242424;
+}
+
+.hacker-mode .custom-button a {
+    color: #15FF00;
+}
+
+.hacker-mode .custom-button:after {
+    background-color: #151515;
+}
+
+.hacker-mode .custom-button span:last-child {
+    color: #15FF00;
+}
+
+.hacker-mode ::selection {
+    color: #151515;
+    background: #15FF00;
+}
+
+.card2 {
+    width: 120px;
+    height: 50px;
+    background-color: #4D4C7D;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+}
+
+/* Styly pro timer */
+#timer {
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Styly pro tlačítko joker */
+#jokerButton {
+    padding: 10px 20px;
+    background-color: #4D4C7D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Styly pro tlačítko joker po najetí myší */
+#jokerButton:hover {
+    background-color: #f99317c3;
+}
+
+/* Styly pro tabulku */
+th,
+td {
+    color: black;
+}
