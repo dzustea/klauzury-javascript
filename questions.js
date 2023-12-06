@@ -115,6 +115,11 @@ window.addEventListener("load", function () {
           correctAnswer: "118",
         },
         {
+          question: "Jaký je největší ostrov na světě?",
+          options: ["Madagaskar", "Kuba", "Grónsko"],
+          correctAnswer: "Grónsko",
+        },
+        {
           question: "Jaký je oficiální jazyk v Brazílii?",
           options: ["Portugalština", "Španělština", "Angličtina"],
           correctAnswer: "Portugalština",
@@ -144,11 +149,6 @@ window.addEventListener("load", function () {
           options: ["Mont Blanc", "Elbrus", "Matterhorn"],
           correctAnswer: "Elbrus",
         },
-        {
-          question: "Jaký je největší ostrov na světě?",
-          options: ["Madagaskar", "Kuba", "Grónsko"],
-          correctAnswer: "Grónsko",
-        },
       ];
     }
   }
@@ -159,14 +159,19 @@ window.addEventListener("load", function () {
       // Pole otázek pro těžký kvíz
       this.questions = [
         {
+          question: "Kdo byl prvním prezidentem Spojených států amerických?",
+          options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln"],
+          correctAnswer: "George Washington"
+        }
+        {
           question: "Jak se nazývá největší oceán na světě?",
           options: ["Tichý oceán", "Atlantský oceán", "Indický oceán"],
           correctAnswer: "Tichý oceán"
         },
-        {
-          question: "Který hmyz vytváří med?",
-          options: ["Včela", "Motýl", "Mravenec"],
-          correctAnswer: "Včela"
+      {
+          question: "Kde byla vyhlášena nezávislost Spojených států amerických?",
+          options: ["New York", "Boston", "Philadelphia"],
+          correctAnswer: "Philadelphia"
         },
         {
           question: "Kde se nachází Velká čínská zeď?",
@@ -233,6 +238,11 @@ window.addEventListener("load", function () {
           options: ["Merkur", "Venuše", "Mars"],
           correctAnswer: "Mars"
         },
+      {
+          question: "Který hmyz vytváří med?",
+          options: ["Včela", "Motýl", "Mravenec"],
+          correctAnswer: "Včela"
+        },
         {
           question: "Kterým rokem skončila druhá světová válka?",
           options: ["1945", "1939", "1951"],
@@ -242,11 +252,6 @@ window.addEventListener("load", function () {
           question: "Jaký druh zvířete je známý pro své dlouhé krkavce?",
           options: ["Žirafa", "Slon", "Klokan"],
           correctAnswer: "Žirafa"
-        },
-        {
-          question: "Kde byla vyhlášena nezávislost Spojených států amerických?",
-          options: ["New York", "Boston", "Philadelphia"],
-          correctAnswer: "Philadelphia"
         },
         {
           question: "Která zvířata obývají Austrálii a jsou známá pro svou vakuovou měchuřinu?",
@@ -303,11 +308,7 @@ window.addEventListener("load", function () {
           options: ["Kyslík", "Uhličitan vápenatý", "Hlinitan sodný"],
           correctAnswer: "Kyslík"
         },
-        {
-          question: "Kdo byl prvním prezidentem Spojených států amerických?",
-          options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln"],
-          correctAnswer: "George Washington"
-        }
+        
       ];
     }
   }
