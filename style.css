@@ -292,7 +292,7 @@ p {
 /* Tlačítko pro změni dark / light mode */
 .darkThemeBtn {
     position: absolute;
-    top: 85px;
+    top: 100px;
     right: 20px;
     z-index: 998;
 }
