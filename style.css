@@ -277,7 +277,7 @@ p {
 
 /* Stylování ikony odkazu */
 .icon-link {
-    position: fixed;
+    position: absolute;
     top: 45px;
     right: 20px;
     z-index: 999;
