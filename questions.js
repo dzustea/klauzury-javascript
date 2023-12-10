@@ -11,9 +11,9 @@ window.addEventListener("load", function () {
           correctAnswer: "5",
         },
         {
-          question: "Kolik je 15 - 5?",
-          options: ["5", "10", "15"],
-          correctAnswer: "10",
+          question: "Kolik je na světě pohlaví?",
+          options: ["5", "2", "0"],
+          correctAnswer: "2",
         },
         {
           question: "Chemický vzorec pro vodu je:",
