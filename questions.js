@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
         },
         {
           question: "Kolik je na světě pohlaví?",
-          options: ["5", "2", "0"],
+          options: ["5", "2", "10+"],
           correctAnswer: "2",
         },
         {
