@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
           correctAnswer: "5",
         },
         {
-          question: "Kolik je na světě pohlaví?",
+          question: "Kolik existuje pohlaví u lidí?",
           options: ["5", "2", "10+"],
           correctAnswer: "2",
         },
